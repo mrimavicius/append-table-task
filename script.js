@@ -8,17 +8,12 @@ var vardas = document.querySelectorAll("input[type=text")[0]
 var pavarde = document.querySelectorAll("input[type=text")[1]
 var amzius = document.querySelector("input[type=number")
 var rows = document.getElementsByTagName("tr")
-
-
 var table = document.querySelector("table")
-
-console.log(rows.length)
 
 prideti.addEventListener("click", pridejimas)
 
 function pridejimas(e) {
     e.preventDefault()
-    console.log(vardas.value, pavarde.value, amzius.value)
     if(vardas.value == 0 || pavarde.value == 0 || amzius.value == "" || amzius.value <= 0){
         alert("Įveskite duomenis")
     } else {
@@ -39,7 +34,6 @@ panaikintiPirma.addEventListener("click", atemimasPirmo)
 
 function atemimasPirmo(e) {
     e.preventDefault()
-    console.log(vardas.value, pavarde.value, amzius.value)
     if(rows.length > 1){
         var row = table.deleteRow(1)
     } else {
@@ -51,7 +45,6 @@ panaikintiPaskutini.addEventListener("click", atemimasPaskutinio)
 
 function atemimasPaskutinio(e) {
     e.preventDefault()
-    console.log(vardas.value, pavarde.value, amzius.value)
     if(rows.length > 1){
         var row = table.deleteRow(rows.length - 1) 
     } else {
